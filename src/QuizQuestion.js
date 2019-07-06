@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import QuizQuestionButton from "./QuizQuestionButton";
 
 class QuizQuestion extends Component {
   constructor(props) {
@@ -16,7 +17,9 @@ class QuizQuestion extends Component {
             {/* {this.props.quiz_question.answer_options.map(option => (
               <li> {option} </li>
             ))} */}
-            <li>{this.props.quiz_question.answer_options[0]}</li>
+            <QuizQuestionButton
+              button_text={this.props.quiz_question.answer_options[0]}
+            />
           </ul>
         </section>
       </main>
